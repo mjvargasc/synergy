@@ -1,0 +1,4 @@
+// Optional local preview: node server.cjs (the app also opens directly from index.html).
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=__dirname,types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'};
+http.createServer((req,res)=>{const url=new URL(req.url,'http://localhost');const file=path.resolve(root,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}fs.readFile(file,(err,data)=>{res.writeHead(err?404:200,{'Content-Type':types[path.extname(file)]||'text/plain; charset=utf-8'});res.end(err?'No encontrado':data);});}).listen(4173,'127.0.0.1',()=>console.log('SYNERGY: http://127.0.0.1:4173'));

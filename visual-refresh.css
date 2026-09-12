@@ -1,0 +1,139 @@
+/* SYNERGY commercial identity — luminous surfaces, electric energy accents. */
+:root {
+  --bg: #F5F8FA;
+  --surface: #FFFFFF;
+  --text: #102A36;
+  --muted: #526773;
+  --line: #DCE7EC;
+  --green: #087A42;
+  --electric: #35E875;
+  --cyan: #16C7E8;
+  --soft: #E9FBF0;
+  --dark: #073B4C;
+}
+body { font-family: Inter, 'Segoe UI', Arial, sans-serif; }
+button { border-radius: 12px; }
+button.primary, .welcome .primary {
+  background: var(--electric); border-color: var(--electric); color: #102A36;
+  box-shadow: 0 5px 16px #087a4212; font-weight: 750;
+}
+button.primary:hover, .welcome .primary:hover { background: #61F093; border-color: #61F093; }
+:focus-visible { outline-color: #087A42; }
+.sidebar { background: #073B4C; padding-top: 30px; }
+.sidebar .brand { letter-spacing: 2px; }
+.brand svg { color: #35E875; }
+.sidebar .tagline, .sidebar-bottom { color: #BDD4DE; }
+.nav { gap: 9px; }
+.nav button { color: #D4E6ED; border-radius: 12px; }
+.nav button.active { background: #35E875; color: #102A36; box-shadow: 0 6px 18px #00192322; }
+.nav button:hover { background: #12556A; color: #FFFFFF; }
+.nav button.active:hover { background: #61F093; color: #102A36; }
+.nav .divider { background: #316071; }
+.sidebar-bottom button { border-color: #487384; color: #E8F3F7; }
+.topbar { background: #FFFFFF; min-height: 82px; }
+.avatar { background: #DFF9EA; color: #087A42; }
+.pill { background: #E9FBF0; color: #087A42; border-color: #C8EFD8; border-radius: 30px; }
+.main { padding-top: 32px; }
+.page-heading h1 { font-weight: 750; }
+.hero {
+  background: #FFFFFF; color: #102A36; border: 1px solid #DCE7EC;
+  box-shadow: 0 12px 35px #073B4C07; border-radius: 22px;
+  grid-template-columns: 1fr 1fr; min-height: 320px;
+}
+.hero-copy { padding: 36px 38px; }
+.hero h2 { font-size: clamp(32px, 3.3vw, 47px); font-weight: 750; letter-spacing: -1.8px; }
+.hero .eyebrow { color: #087A42; letter-spacing: 1.6px; }
+.hero p { color: #526773; max-width: 400px; }
+.hero .hero-link { margin-top: 5px; font-size: 13px; }
+.energy-scene { position: relative; display: flex; align-items: center; background: #073B4C; overflow: hidden; min-width: 0; }
+.energy-scene::before { content: ''; position: absolute; width: 330px; height: 330px; border: 1px solid #16C7E850; border-radius: 50%; right: -100px; top: -100px; }
+.energy-scene .hero-art { position: relative; height: 100%; padding: 10px 8px; }
+.scene-label { position: absolute; left: 26px; top: 25px; display: flex; align-items: center; gap: 8px; color: #CCF5FF; font-size: 10px; letter-spacing: 1.8px; font-weight: 700; }
+.scene-label::before { content: ''; width: 7px; height: 7px; background: #35E875; border-radius: 50%; }
+.scene-caption { position: absolute; right: 22px; bottom: 20px; color: #B7DCE7; font-size: 10px; }
+.vehicle-strip { background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; margin: 16px 0 30px; padding: 18px 22px; }
+.vehicle-strip>.icon { color: #087A42; width: 29px; height: 29px; }
+.battery-bar { background: #DBEAEF; height: 9px; }
+.battery-bar i { background: #35E875; }
+.battery > .icon { color: #087A42; }
+.detail-grid small { display: flex; align-items: center; gap: 5px; }
+.detail-grid small .icon { width: 16px; height: 16px; }
+.section-head h2 { font-weight: 750; }
+.service { padding: 0 23px 23px; border-radius: 18px; overflow: hidden; box-shadow: 0 7px 25px #073B4C06; }
+.service-visual { margin: 0 -23px 22px; height: 145px; background: #E9F7FB; position: relative; overflow: hidden; }
+.service-visual .hero-art { height: 155px; min-height: 0; width: 100%; margin: -6px 0 0; }
+.service:nth-child(2) .service-visual { background: #E9FBF0; }
+.service:nth-child(3) .service-visual { background: #EAF1F8; }
+.service .service-top { margin-bottom: 15px; }
+.service .service-top svg { width: 25px; height: 25px; }
+.service h3 { font-weight: 750; }
+.service p { min-height: 42px; }
+.service .price { font-size: 23px; }
+.service button { margin-top: 18px; border-color: #CAE2D4; background: #E9FBF0; color: #087A42; }
+.service:first-child button { background: #35E875; color: #102A36; border-color: #35E875; }
+.service button:hover { background: #C9F7DB; }
+.panel, .detail { border-radius: 18px; box-shadow: 0 7px 25px #073B4C05; }
+input, select { border-radius: 10px; }
+.station-item { border-radius: 13px; }
+.station-item.selected { background: #EDFCF3; border-color: #087A42; }
+.station-num { background: #E2F8EF !important; }
+.map { border-radius: 18px; background: #EAF3F6; }
+.map-label, .map-legend { color: #073B4C; }
+.pin { background: #087A42; }
+.pin.selected { background: #35E875; color: #102A36; outline-color: #35E87540; }
+.map>svg>rect { fill: #EAF1F4; }
+.map>svg>path:first-of-type { fill: #ADE5EE; }
+.map>svg g[fill="#c9d6bf"] { fill: #C7EAD6; }
+.illustration { background: #EDF7FA; border: 1px solid #DFEDF2; border-radius: 14px; }
+.active-banner { background: #E9FBF0; border-color: #B5EAC9; }
+.charge-meter { background: conic-gradient(#35E875 calc(var(--value)*1%),#E3EEF2 0); }
+.steps .current b { background: #35E875; color: #102A36; border-color: #35E875; }
+.guide { background: #DDF7FC; color: #073B4C; border-color: #AEE3EE; }
+#notice { background: #073B4C; }
+.welcome { background: #F5F8FA; color: #102A36; }
+.welcome-copy { padding-top: 45px; padding-bottom: 45px; }
+.welcome .brand { color: #073B4C; margin-bottom: 65px; }
+.welcome .brand svg { color: #087A42; }
+.welcome h1 { font-size: clamp(43px,4.6vw,66px); }
+.welcome p, .welcome small { color: #526773; }
+.welcome-art { background: #073B4C; position: relative; }
+.welcome-art::before { content: 'SYNERGY / ELECTRIC MOBILITY'; position: absolute; top: 50px; left: 40px; color: #B7E7F2; letter-spacing: 2px; font-size: 11px; }
+.welcome .eyebrow { color: #087A42 !important; }
+.welcome h1 span { color: #087A42 !important; }
+.welcome .primary { padding: 16px 25px; }
+/* The optional dark preference remains functional; the default identity is light. */
+.dark { --bg:#0C2834; --surface:#133D4D; --text:#F0F8FA; --muted:#BCD2DD; --line:#345767; --green:#71ECA0; --soft:#174D40; }
+.dark .topbar, .dark .vehicle-strip { background: var(--surface); }
+.dark .hero { background: var(--surface); color: var(--text); }
+.dark .hero p { color: var(--muted); }
+.dark .hero .eyebrow { color: #71ECA0; }
+.dark .station-item.selected { background: #174D40; }
+.dark .active-banner { background: #174D40; }
+.dark .service-visual, .dark .illustration { background: #D6E8EF; }
+.dark .service:nth-child(2) .service-visual { background: #D4EEE0; }
+.dark .service:nth-child(3) .service-visual { background: #D8E4EF; }
+.dark .vehicle-strip>.icon { color:#71ECA0; }
+@media(max-width:1100px) {
+  .hero-copy { padding: 28px; }
+  .hero h2 { font-size: 35px; }
+  .service { padding-left: 18px; padding-right: 18px; }
+  .service-visual { margin-left: -18px; margin-right: -18px; }
+}
+@media(max-width:760px) {
+  .sidebar { padding-top: 0; }
+  .nav { gap: 0; }
+  .nav button { border-radius: 0; }
+  .hero { grid-template-columns: 1fr; border-radius: 18px; }
+  .hero-copy { padding: 26px; }
+  .hero h2 { font-size: 35px; }
+  .energy-scene { height: 220px; }
+  .energy-scene .hero-art { height: 215px; min-height: 0; margin-top: 20px; }
+  .scene-label { top: 17px; left: 20px; font-size: 9px; }
+  .scene-caption { font-size: 9px; bottom: 12px; }
+  .vehicle-strip { padding: 17px; }
+  .service-visual { height: 165px; }
+  .service-visual .hero-art { height: 178px; }
+  .service p { min-height: 0; }
+  .welcome .brand { margin-bottom: 45px; }
+  .welcome-art::before { top: 23px; left: 25px; font-size: 9px; }
+}

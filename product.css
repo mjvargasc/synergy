@@ -1,0 +1,33 @@
+/* Product extensions reuse the established visual system. */
+.service-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+.service-tabs button:last-child{margin-left:auto}
+.filters{grid-template-columns:minmax(160px,1.2fr) repeat(4,minmax(100px,1fr))}
+.expansion{margin-top:28px;border-top:1px solid var(--line);padding-top:24px}
+.expansion h2{font-size:19px}.expansion span{display:inline-block;padding:10px 15px;border:1px dashed var(--line);border-radius:10px;margin:0 10px 10px 0;font-size:13px;color:var(--muted)}
+textarea{display:block;width:100%;resize:vertical;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;line-height:1.5;padding:12px;border-radius:10px;margin-top:8px;min-height:80px}
+.included{padding-left:20px;line-height:2;color:var(--muted)}
+.home-progress{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}
+.home-progress span{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:8px 12px;color:var(--muted)}
+.home-progress .done{background:var(--soft);color:var(--green);border-color:#8ad3a5}
+.record button{margin-right:8px}.record p{margin:10px 0;color:var(--muted);overflow-wrap:anywhere}
+.wallet-total{font-size:46px;font-weight:650;margin:25px 0;letter-spacing:-1.8px}
+.wallet-total~.wide{margin-top:24px}
+.help-content details{border-bottom:1px solid var(--line);padding:12px 0}.help-content summary{min-height:44px;cursor:pointer;padding:10px 0;font-weight:650}
+.van-route{position:relative;display:flex;justify-content:space-between;margin:25px 0 15px;padding-top:45px;font-size:11px;color:var(--muted)}
+.van-route::before{content:'';position:absolute;left:0;right:0;top:28px;border-top:3px dashed #9fceda}
+.route-van{position:absolute;top:0;left:clamp(0px,calc(var(--route) - 35px),calc(100% - 44px));background:var(--surface);color:var(--green);animation:van-arrive .5s ease both}
+.route-van svg{width:40px;height:30px}.arrival{animation:arrival .55s ease both}
+.reservation-card{animation:card-appear .3s ease both}.reservation-card .pill svg{animation:check-in .4s ease both}
+.pin.selected{animation:marker-pulse .6s ease}.home-connection{animation:home-connect .9s ease}.charge-meter{animation:card-appear .35s ease}
+button:hover:not(:disabled){transform:translateY(-1px)}button:active:not(:disabled){transform:scale(.97)}.pin:hover:not(:disabled){transform:translate(-50%,-50%)}
+.experience-dialog button:active{transform:scale(.97)}
+.record:has(.home-progress){animation:card-appear .25s ease}
+@keyframes card-appear{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes marker-pulse{50%{box-shadow:0 0 0 12px #35e87540}}
+@keyframes check-in{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes van-arrive{from{transform:translateX(-28px)}to{transform:translateX(0)}}
+@keyframes arrival{50%{box-shadow:0 0 0 5px #35e87555}}
+@keyframes home-connect{50%{box-shadow:inset 0 -5px #35e875}}
+@media(max-width:1150px){.filters{grid-template-columns:repeat(3,1fr)}.balance-top{display:none}}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.hero-copy{padding:22px}.hero h2{font-size:30px}.hero-copy .actions{margin-top:14px;gap:8px}.hero-copy .actions button{font-size:12px;flex:1;padding:10px}.energy-scene{height:145px}.energy-scene .hero-art{height:155px;margin-top:5px}.scene-label{font-size:7px;top:10px}.scene-caption{font-size:8px;bottom:8px}.service-tabs{gap:7px}.service-tabs button{font-size:12px;padding:10px}.service-tabs button:last-child{margin-left:0}.vehicle-strip{font-size:12px}.topbar{flex-wrap:wrap}.topbar-left{min-width:150px}.topbar-right{margin-left:auto}.form-grid input{font-size:14px}.home-progress{gap:5px}.home-progress span{padding:6px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
